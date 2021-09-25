@@ -9,8 +9,6 @@ COLORS_LISTS = ["YELLOW", "RED", "PURPLE", "GREEN", "BLUE","MAGENTA"]
 RUNNING_SERVERS = 0
 MAX_SERVERS = 100
 
-def generate_color():    
-    return COLORS_LISTS[randrange(len(COLORS_LISTS) - 1)]
 
 def generate_output(request_data,computation="report", count=0):
     global RUNNING_SERVERS
