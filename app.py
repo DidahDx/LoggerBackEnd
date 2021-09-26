@@ -1,8 +1,12 @@
 from flask import Flask, json, jsonify, request
 from random import randrange
 from datetime import datetime
+import os
 
 app = Flask(__name__)
+
+env_config = os.getenv("APP_SETTINGS", "config.ProductionConfig")
+app.config.from_object(env_config)
 
 MAX_COLOR_CODE = 255
 RUNNING_SERVERS = 0
