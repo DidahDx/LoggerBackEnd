@@ -9,12 +9,11 @@ This is a pyhton project using flask frameworks
 '''
 virtualenv venv
 
-source venv/bin/activate
+`source venv/bin/activate`
 
 - install the requirements
 
 ```
-
 pip3 install -r requirements.txt
 
 ```
