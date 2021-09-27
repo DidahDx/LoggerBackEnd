@@ -8,9 +8,7 @@ app = Flask(__name__)
 env_config = os.getenv("APP_SETTINGS", "config.ProductionConfig")
 app.config.from_object(env_config)
 
-MAX_COLOR_CODE = 255
 RUNNING_SERVERS = 0
-MAX_SERVERS = 100
 RESULTS_LIST = list()
 
 
@@ -81,7 +79,8 @@ def sample_report():
 
 @app.route('/clear', methods=['GET'])
 def clear_list():
-    RESULTS_LIST.clear
-    return "[]"
+    RUNNING_SERVERS=0
+    RESULTS_LIST.clear()
+    return jsonify(RESULTS_LIST)
 
 app.run()
